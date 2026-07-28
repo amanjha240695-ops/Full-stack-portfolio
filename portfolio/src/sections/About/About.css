@@ -1,0 +1,90 @@
+.about{
+    padding:100px 0;
+}
+
+.section-header{
+    max-width:760px;
+    margin-bottom:60px;
+}
+
+.section-tag{
+    display:inline-block;
+    padding:8px 16px;
+    border-radius:999px;
+    background:var(--surface);
+    border:1px solid var(--border);
+    color:var(--primary);
+    font-size:.9rem;
+    font-weight:600;
+    margin-bottom:18px;
+}
+
+.section-title{
+    font-size:clamp(2rem,4vw,3rem);
+    line-height:1.2;
+    margin-bottom:20px;
+    color:var(--text);
+}
+
+.section-description{
+    color:var(--text-light);
+    line-height:1.8;
+    font-size:1.05rem;
+    max-width:700px;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:24px;
+}
+
+.about-card{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:28px;
+    transition:.3s ease;
+}
+
+.about-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 16px 40px rgba(0,0,0,.08);
+}
+
+.about-icon{
+    font-size:2rem;
+    color:var(--primary);
+    margin-bottom:18px;
+}
+
+.about-card h3{
+    font-size:1.25rem;
+    margin-bottom:12px;
+    color:var(--text);
+}
+
+.about-card p{
+    color:var(--text-light);
+    line-height:1.7;
+}
+
+@media (max-width:768px){
+
+    .about{
+        padding:80px 0;
+    }
+
+    .section-header{
+        text-align:center;
+        margin:0 auto 50px;
+    }
+
+    .about-grid{
+        grid-template-columns:1fr;
+    }
+
+    .about-card{
+        padding:24px;
+    }
+}

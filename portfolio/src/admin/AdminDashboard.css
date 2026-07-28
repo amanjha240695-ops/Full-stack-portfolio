@@ -1,0 +1,393 @@
+.admin-dashboard {
+  width: 100%;
+}
+
+
+
+/* Navbar */
+
+.admin-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  padding: 20px 24px;
+  background: white;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+}
+
+
+.admin-navbar h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #0f172a;
+}
+
+
+.admin-navbar span {
+  display: block;
+  margin-top: 6px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+
+
+/* Logout */
+
+.logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  background: #0f172a;
+  color: white;
+  padding: 11px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+
+.logout-btn:hover {
+  background: #1e293b;
+}
+
+
+
+/* Error */
+
+.admin-error {
+  background: #fee2e2;
+  color: #b91c1c;
+  padding: 14px 18px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
+
+
+/* Stats */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+
+
+.stat-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  transition: 0.2s ease;
+}
+
+
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(
+    15,
+    23,
+    42,
+    0.08
+  );
+}
+
+
+
+.stat-card svg {
+  color: #2563eb;
+}
+
+
+.stat-card h3 {
+  margin: 0;
+  font-size: 14px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+
+.stat-card p {
+  margin: 8px 0 0;
+  font-size: 32px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+
+
+/* Loading */
+
+.admin-loading {
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  font-size: 18px;
+}
+
+
+
+/* Tablet */
+
+@media (max-width: 1024px) {
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+
+  .admin-navbar {
+
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+
+  }
+
+
+
+  .logout-btn {
+
+    width: 100%;
+    justify-content: center;
+
+  }
+
+
+
+  .stats-grid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+
+
+  .stat-card {
+
+    padding: 20px;
+
+  }
+
+
+
+  .stat-card p {
+
+    font-size: 28px;
+
+  }
+
+}
+
+/* Recent Messages */
+
+.recent-section {
+  margin-top: 32px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+
+.recent-section h3 {
+  margin: 0 0 20px;
+  color: #0f172a;
+  font-size: 20px;
+}
+
+
+
+.message-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+
+
+.message-item {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 16px;
+
+  border-radius: 12px;
+
+  background: #f8fafc;
+
+  border: 1px solid #e2e8f0;
+
+}
+
+
+
+.message-user h4 {
+
+  margin: 0;
+
+  color: #0f172a;
+
+  font-size: 15px;
+
+}
+
+
+
+.message-user p {
+
+  margin: 5px 0 0;
+
+  color: #64748b;
+
+  font-size: 13px;
+
+}
+
+
+
+.message-status {
+
+  padding: 6px 12px;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+}
+
+
+
+.status-read {
+
+  background: #dcfce7;
+
+  color: #166534;
+
+}
+
+
+
+.status-unread {
+
+  background: #dbeafe;
+
+  color: #1d4ed8;
+
+}
+
+
+
+/* Mobile */
+
+@media (max-width:768px) {
+
+
+  .recent-section {
+
+    padding: 18px;
+
+  }
+
+
+
+  .message-item {
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+  }
+
+
+}
+/* Quick Actions */
+
+.quick-actions {
+
+  margin-top: 25px;
+
+  display: flex;
+
+  gap: 15px;
+
+}
+
+
+
+.quick-actions button {
+
+  display:flex;
+
+  align-items:center;
+
+  gap:8px;
+
+  background:#2563eb;
+
+  color:white;
+
+  border:none;
+
+  padding:12px 18px;
+
+  border-radius:10px;
+
+  cursor:pointer;
+
+  font-weight:600;
+
+}
+
+
+
+.quick-actions button:hover{
+
+  opacity:0.9;
+
+}
+
+
+
+@media(max-width:768px){
+
+  .quick-actions{
+
+    flex-direction:column;
+
+  }
+
+
+  .quick-actions button{
+
+    justify-content:center;
+
+  }
+
+}

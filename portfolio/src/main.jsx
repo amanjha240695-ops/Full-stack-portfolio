@@ -1,0 +1,12 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
+
+import App from "./App";
+
+import "./styles/reset.css";
+import "./styles/variable.css";
+import "./styles/gloabal.css";
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+    <App />
+);

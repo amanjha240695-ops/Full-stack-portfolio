@@ -1,0 +1,1001 @@
+.hero {
+  min-height: calc(100vh - 72px);
+  display: flex;
+  align-items: center;
+  padding: 80px 0;
+}
+
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 1.4fr 0.6fr;
+  align-items: center;
+  gap: 60px;
+}
+
+
+
+/* LEFT */
+
+.hero-content {
+  max-width: 700px;
+}
+
+
+.hero-badge {
+
+  display: inline-block;
+
+  padding: 8px 18px;
+
+  border-radius: 50px;
+
+  background: var(--surface-color);
+
+  color: var(--primary-color);
+
+  border: 1px solid var(--border-color);
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  margin-bottom: 25px;
+
+}
+
+
+
+.hero-content h1 {
+
+  font-size: 4rem;
+
+  line-height: 1.15;
+
+  margin-bottom: 12px;
+
+  color: var(--text-color);
+
+}
+
+
+
+.hero-content h1 span {
+
+  color: var(--primary-color);
+
+}
+
+
+
+.hero-content h2 {
+
+  font-size: 1.7rem;
+
+  color: var(--text-light);
+
+  font-weight: 500;
+
+  margin-bottom: 24px;
+
+}
+
+
+
+.hero-description {
+
+  font-size: 17px;
+
+  line-height: 1.8;
+
+  color: var(--text-light);
+
+  margin-bottom: 40px;
+
+}
+
+
+
+
+
+/* BUTTONS */
+
+
+.hero-buttons {
+
+  display: flex;
+
+  gap: 18px;
+
+  flex-wrap: wrap;
+
+  margin-bottom: 35px;
+
+}
+
+
+
+.hero-buttons .btn {
+
+  padding: 13px 26px;
+
+  border-radius: 10px;
+
+  font-weight: 600;
+
+  transition: .3s;
+
+}
+
+
+
+.hero-buttons .btn-primary {
+
+  background: var(--primary-color);
+
+  color: white;
+
+  border: 1px solid var(--primary-color);
+
+  cursor: pointer;
+
+}
+
+
+.hero-buttons .btn-primary:hover {
+
+  transform: translateY(-2px);
+
+}
+
+
+
+.hero-buttons .btn-outline {
+
+  border: 1px solid var(--border-color);
+
+  color: var(--text-color);
+
+}
+
+
+
+.hero-buttons .btn-outline:hover {
+
+  background: var(--surface-color);
+
+}
+
+
+
+
+
+/* SOCIAL */
+
+
+.hero-socials {
+
+  display:flex;
+
+  gap:18px;
+
+}
+
+
+
+.hero-socials a,
+.email-message-icon {
+
+
+  width:48px;
+
+  height:48px;
+
+
+  border:1px solid var(--border-color);
+
+
+  border-radius:50%;
+
+
+  display:grid;
+
+
+  place-items:center;
+
+
+  color:var(--text-color);
+
+
+  font-size:20px;
+
+
+  transition:.3s;
+
+
+}
+
+
+
+.hero-socials a:hover,
+.email-message-icon:hover {
+
+
+  background:var(--primary-color);
+
+
+  color:white;
+
+
+}
+
+
+
+
+
+.email-message-icon {
+
+  background:transparent;
+
+  cursor:pointer;
+
+}
+
+
+
+
+
+/* RIGHT CARD */
+
+
+.hero-card {
+
+  background:var(--card-color);
+
+  border:1px solid var(--border-color);
+
+  border-radius:20px;
+
+  padding:35px;
+
+  text-align:center;
+
+  box-shadow:var(--shadow);
+
+}
+
+
+
+.hero-image {
+
+  width:220px;
+
+  height:220px;
+
+  border-radius:50%;
+
+  object-fit:cover;
+
+  display:block;
+
+  margin:auto;
+
+  margin-bottom:25px;
+
+}
+
+
+
+.hero-card h3 {
+
+  font-size:28px;
+
+  margin-bottom:8px;
+
+}
+
+
+
+.role {
+
+  color:var(--text-light);
+
+  margin-bottom:30px;
+
+}
+
+
+
+
+.hero-details {
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:15px;
+
+}
+
+
+
+
+.detail {
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  padding:14px 18px;
+
+  border:1px solid var(--border-color);
+
+  border-radius:10px;
+
+}
+
+
+
+.detail span {
+
+  font-weight:600;
+
+  color:var(--text-color);
+
+}
+
+
+
+.detail p {
+
+  color:var(--text-light);
+
+}
+
+
+
+
+
+/* =========================
+ MESSAGE MODAL
+========================= */
+
+
+.message-overlay {
+
+  position:fixed;
+
+  inset:0;
+
+
+  background:rgba(15,23,42,.65);
+
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+
+  z-index:9999;
+
+
+  padding:20px;
+
+}
+
+
+
+
+.message-modal {
+
+
+  width:100%;
+
+  max-width:520px;
+
+
+  background:var(--card-color);
+
+
+  border:1px solid var(--border-color);
+
+
+  border-radius:20px;
+
+
+  padding:32px;
+
+
+  position:relative;
+
+
+  box-shadow:var(--shadow);
+
+
+  animation:popup .25s ease;
+
+
+}
+
+
+
+
+@keyframes popup {
+
+
+  from {
+
+    opacity:0;
+
+    transform:translateY(20px) scale(.95);
+
+  }
+
+
+  to {
+
+    opacity:1;
+
+    transform:translateY(0) scale(1);
+
+  }
+
+
+}
+
+
+
+
+.message-modal h2 {
+
+
+  color:var(--text-color);
+
+  text-align:center;
+
+  font-size:26px;
+
+  margin-bottom:25px;
+
+
+}
+
+
+
+
+
+.close-message {
+
+
+  position:absolute;
+
+
+  top:15px;
+
+  right:15px;
+
+
+  width:36px;
+
+  height:36px;
+
+
+  border-radius:50%;
+
+
+  border:1px solid var(--border-color);
+
+
+  background:var(--surface-color);
+
+
+  color:var(--text-color);
+
+
+  cursor:pointer;
+
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+
+}
+
+
+
+
+
+.close-message:hover {
+
+
+  background:var(--primary-color);
+
+  color:white;
+
+
+}
+
+
+
+
+
+.message-modal form {
+
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:15px;
+
+
+}
+
+
+
+
+
+.message-modal input,
+.message-modal textarea {
+
+
+  width:100%;
+
+
+  padding:14px 16px;
+
+
+  border-radius:10px;
+
+
+  border:1px solid var(--border-color);
+
+
+  background:var(--surface-color);
+
+
+  color:var(--text-color);
+
+
+  font-size:15px;
+
+
+  outline:none;
+
+
+}
+
+
+
+
+
+.message-modal input:focus,
+.message-modal textarea:focus {
+
+
+  border-color:var(--primary-color);
+
+
+  box-shadow:0 0 0 3px rgba(37,99,235,.15);
+
+
+}
+
+
+
+
+
+.message-modal textarea {
+
+
+  min-height:120px;
+
+  resize:vertical;
+
+
+}
+
+
+
+
+
+.send-message-btn {
+
+
+  padding:14px;
+
+
+  border:none;
+
+
+  border-radius:10px;
+
+
+  background:var(--primary-color);
+
+
+  color:white;
+
+
+  font-size:16px;
+
+
+  font-weight:600;
+
+
+  cursor:pointer;
+
+
+}
+
+
+
+
+
+.send-message-btn:hover {
+
+
+  transform:translateY(-2px);
+
+
+}
+
+
+
+
+
+.send-message-btn:disabled {
+
+
+  opacity:.6;
+
+  cursor:not-allowed;
+
+
+}
+
+
+
+
+
+.message-response {
+
+
+  margin-top:18px;
+
+
+  text-align:center;
+
+
+  font-weight:600;
+
+
+  color:#16a34a;
+
+
+}
+
+
+
+
+
+/* TABLET */
+
+
+@media(max-width:992px){
+
+
+.hero {
+
+padding:60px 0;
+
+}
+
+
+.hero-container {
+
+grid-template-columns:1fr;
+
+gap:50px;
+
+text-align:center;
+
+}
+
+
+
+.hero-content {
+
+max-width:100%;
+
+}
+
+
+
+.hero-buttons,
+.hero-socials {
+
+justify-content:center;
+
+}
+
+
+
+.hero-card {
+
+max-width:420px;
+
+margin:auto;
+
+width:100%;
+
+}
+
+
+}
+
+
+
+
+
+/* MOBILE */
+
+
+@media(max-width:576px){
+
+
+.hero-content h1 {
+
+font-size:2.7rem;
+
+}
+
+
+.hero-content h2 {
+
+font-size:1.2rem;
+
+}
+
+
+.hero-description {
+
+font-size:15px;
+
+}
+
+
+
+.hero-buttons {
+
+flex-direction:column;
+
+}
+
+
+
+.hero-buttons .btn {
+
+width:100%;
+
+}
+
+
+
+.hero-image {
+
+width:170px;
+
+height:170px;
+
+}
+
+
+
+.detail {
+
+flex-direction:column;
+
+gap:6px;
+
+text-align:center;
+
+}
+
+
+
+
+.message-modal {
+
+padding:24px 18px;
+
+}
+
+
+
+.message-modal h2 {
+
+font-size:22px;
+
+}
+
+
+
+}
+
+/* =========================
+   Email Info Popup
+========================= */
+
+
+.email-info-text {
+
+  text-align: center;
+
+  color: var(--text-light);
+
+  font-size: 15px;
+
+  line-height: 1.6;
+
+  margin-bottom: 12px;
+
+}
+
+
+
+.my-email {
+
+  text-align: center;
+
+  color: var(--primary-color);
+
+  font-size: 20px;
+
+  font-weight: 700;
+
+  margin-bottom: 18px;
+
+  word-break: break-word;
+
+}
+
+
+
+
+.send-email-btn {
+
+
+  display: block;
+
+  width: 100%;
+
+
+  text-align: center;
+
+
+  padding: 14px;
+
+
+  border-radius: 10px;
+
+
+  background: var(--primary-color);
+
+
+  color: white;
+
+
+  font-size: 16px;
+
+
+  font-weight: 600;
+
+
+  text-decoration: none;
+
+
+  margin-top: 20px;
+
+
+  transition: .3s;
+
+}
+
+
+
+.send-email-btn:hover {
+
+
+  transform: translateY(-2px);
+
+  opacity: .9;
+
+
+}
+
+
+
+
+.urgent-message-btn {
+
+
+  width: 100%;
+
+
+  margin-top: 12px;
+
+
+  padding: 14px;
+
+
+  border-radius: 10px;
+
+
+  border: 1px solid var(--border-color);
+
+
+  background: var(--surface-color);
+
+
+  color: var(--text-color);
+
+
+  font-size: 16px;
+
+
+  font-weight: 600;
+
+
+  cursor: pointer;
+
+
+  transition: .3s;
+
+
+}
+
+
+
+
+.urgent-message-btn:hover {
+
+
+  background: var(--primary-color);
+
+
+  color: white;
+
+
+}
+
+
+
+/* Mobile */
+
+@media(max-width:576px){
+
+
+  .my-email {
+
+    font-size: 17px;
+
+  }
+
+
+  .send-email-btn,
+  .urgent-message-btn {
+
+    font-size: 15px;
+
+  }
+
+
+}

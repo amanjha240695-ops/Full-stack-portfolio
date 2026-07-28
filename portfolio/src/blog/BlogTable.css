@@ -1,0 +1,339 @@
+.blog-table-container {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+
+/* Search */
+
+.blog-search {
+  margin-bottom: 20px;
+}
+
+
+.blog-search input {
+  width: 100%;
+  max-width: 350px;
+  padding: 12px 16px;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+
+  font-size: 14px;
+  outline: none;
+
+  transition: 0.2s;
+}
+
+
+.blog-search input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+
+
+
+/* Table */
+
+.blog-table {
+  width: 100%;
+  overflow-x: auto;
+}
+
+
+
+.blog-table-header,
+.blog-row {
+
+  display: grid;
+
+  grid-template-columns:
+    80px
+    1.5fr
+    120px
+    140px
+    180px;
+
+  align-items: center;
+
+  gap: 16px;
+
+  padding: 16px 12px;
+
+}
+
+
+
+
+/* Header */
+
+.blog-table-header {
+
+  background: #f8fafc;
+
+  border-radius: 12px;
+
+  color: #475569;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+}
+
+
+
+
+/* Rows */
+
+.blog-row {
+
+  border-bottom: 1px solid #e2e8f0;
+
+  color: #0f172a;
+
+  font-size: 14px;
+
+  transition: 0.2s;
+
+}
+
+
+.blog-row:hover {
+
+  background: #f8fafc;
+
+}
+
+
+
+
+/* Cover image */
+
+.blog-row img {
+
+  width: 60px;
+
+  height: 45px;
+
+  object-fit: cover;
+
+  border-radius: 8px;
+
+  background: #e2e8f0;
+
+}
+
+
+
+
+/* Status */
+
+.blog-row span:nth-child(3) {
+
+  font-weight: 600;
+
+}
+
+
+
+.blog-row span:nth-child(3)::first-letter {
+
+  color: #2563eb;
+
+}
+
+
+
+
+/* Actions */
+
+.blog-actions {
+
+  display: flex;
+
+  gap: 8px;
+
+}
+
+
+
+.blog-actions button {
+
+  border: none;
+
+  padding: 8px 12px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  font-size: 13px;
+
+  font-weight: 500;
+
+  transition: 0.2s;
+
+}
+
+
+
+.blog-actions button:first-child {
+
+  background: #2563eb;
+
+  color: white;
+
+}
+
+
+
+.blog-actions button:nth-child(2) {
+
+  background: #fee2e2;
+
+  color: #dc2626;
+
+}
+
+
+
+.blog-actions button:nth-child(3) {
+
+  background: #dcfce7;
+
+  color: #16a34a;
+
+}
+
+
+
+.blog-actions button:hover {
+
+  transform: translateY(-1px);
+
+  opacity: 0.9;
+
+}
+
+
+
+
+/* Empty state */
+
+.empty-blog {
+
+  padding: 40px;
+
+  text-align: center;
+
+  color: #64748b;
+
+  font-size: 16px;
+
+}
+
+
+
+
+/* Responsive */
+
+@media (max-width: 900px) {
+
+
+  .blog-table-header,
+  .blog-row {
+
+    grid-template-columns:
+      70px
+      1fr
+      100px
+      120px;
+
+  }
+
+
+  .blog-actions {
+
+    flex-wrap: wrap;
+
+  }
+
+
+}
+
+
+
+
+@media (max-width: 650px) {
+
+
+  .blog-table-container {
+
+    padding: 16px;
+
+  }
+
+
+
+  .blog-table-header {
+
+    display: none;
+
+  }
+
+
+
+  .blog-row {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    background: #f8fafc;
+
+    margin-bottom: 12px;
+
+    border-radius: 12px;
+
+    padding: 16px;
+
+  }
+
+
+
+  .blog-row img {
+
+    width: 100%;
+
+    height: 160px;
+
+  }
+
+
+
+  .blog-actions {
+
+    width: 100%;
+
+  }
+
+
+
+  .blog-actions button {
+
+    flex: 1;
+
+  }
+
+}

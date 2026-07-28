@@ -1,0 +1,185 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  transition: 0.3s ease;
+}
+
+.navbar-scroll {
+  background: var(--bg-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: auto;
+  height: 72px;
+  padding: 0 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.logo span {
+  color: var(--primary-color);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-links button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  font-size: 15px;
+  color: var(--text-color);
+
+  transition: .3s;
+}
+
+.nav-links button:hover {
+  color: var(--primary-color);
+}
+
+.nav-links button.active {
+  color: var(--primary-color);
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.theme-btn,
+.menu-btn {
+  width: 42px;
+  height: 42px;
+
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: transparent;
+  color: var(--text-color);
+
+  cursor: pointer;
+
+  font-size: 20px;
+}
+
+.resume-btn {
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+
+  background: var(--primary-color);
+  color: white;
+
+  font-size: 14px;
+  transition: .3s;
+}
+
+.resume-btn:hover {
+  opacity: .9;
+}
+
+.menu-btn {
+  display: none;
+}
+
+@media (max-width:900px) {
+
+  .menu-btn {
+    display: flex;
+  }
+
+  .resume-btn {
+    display: none;
+  }
+
+  .nav-links {
+    position: absolute;
+
+    top: 72px;
+    left: 0;
+
+    width: 100%;
+
+    background: var(--bg-color);
+
+    border-top: 1px solid var(--border-color);
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 0;
+
+    overflow: hidden;
+    max-height: 0;
+
+    transition: .3s;
+  }
+
+  .show-menu {
+    max-height: 500px;
+    padding: 20px 0;
+  }
+
+  .nav-links button {
+    padding: 16px;
+    width: 100%;
+    text-align: center;
+  }
+
+}
+
+@media (max-width:500px){
+
+  .navbar-container{
+    padding:0 16px;
+  }
+
+  .logo{
+    font-size:1.3rem;
+  }
+
+}
+
+.blog-nav-link {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 8px 0;
+}
+
+.blog-nav-link:hover {
+  color: var(--primary-color);
+}
+
+.blog-nav-link.active {
+  color: var(--primary-color);
+}
+
+.show-menu .blog-nav-link {
+  width: 100%;
+  text-align: center;
+}

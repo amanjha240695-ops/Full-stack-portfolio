@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://full-stack-portfolio-fzen.onrender.com/",
+  baseURL: "https://full-stack-portfolio-fzen.onrender.com/api",
   headers: {
     "Content-Type": "application/json",
   },

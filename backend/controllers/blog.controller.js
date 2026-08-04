@@ -1,5 +1,4 @@
 import prisma from "../config/prisma.js";
-
 // ==============================
 // Create Blog (Admin)
 // ==============================
@@ -217,11 +216,6 @@ export const updateBlog = async(req,res)=>{
 };
 
 
-
-
-
-
-
 // ==============================
 // Delete Blog
 // ==============================
@@ -229,10 +223,7 @@ export const deleteBlog = async(req,res)=>{
 
   try{
 
-
     const {id}=req.params;
-
-
 
     await prisma.blog.delete({
 
@@ -272,11 +263,6 @@ export const deleteBlog = async(req,res)=>{
   }
 
 };
-
-
-
-
-
 
 
 // ==============================
@@ -341,10 +327,6 @@ export const publishBlog = async(req,res)=>{
 
 
 
-
-
-
-
 // ==============================
 // Unpublish Blog
 // ==============================
@@ -352,13 +334,10 @@ export const unpublishBlog = async(req,res)=>{
 
   try{
 
-
     const {id}=req.params;
 
-
-
     const blog = await prisma.blog.update({
-
+      
       where:{
 
         id:id,

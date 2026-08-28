@@ -60,6 +60,16 @@ const projectsData = [
     github:"https://github.com/amanjha240695-ops/Full-stack-portfolio",
     featured:true
   },
+  {
+    id:7,
+    title:"joblens",
+    description:"JobLens — AI-Powered Job & Internship Analyzer",
+    image:"https://res.cloudinary.com/dvn3f6gja/image/upload/v1787899777/Gemini_Generated_Image_95a0em95a0em95a0_oldofj.png",
+    tech:["React+vite","Node.js + Express + Prisma + PostgreSQL + Gemini AI"],
+    live:"https://joblens-kappa.vercel.app/",
+    github:"https://github.com/amanjha240695-ops/Joblens",
+    featured:true
+  }
    
 ];
 
